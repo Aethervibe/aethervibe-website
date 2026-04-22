@@ -6,14 +6,14 @@ export default function LeadForm() {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: { preventDefault(): void; currentTarget: HTMLFormElement }) {
     e.preventDefault();
     setLoading(true);
     const form = e.currentTarget;
     const data = new FormData(form);
 
     try {
-      await fetch("https://formspree.io/f/placeholder", {
+      await fetch("https://formspree.io/f/myklndln", {
         method: "POST",
         body: data,
         headers: { Accept: "application/json" },

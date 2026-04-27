@@ -15,6 +15,9 @@ export default function Nav() {
           <a href="#how-it-works" className="hover:text-emerald-600 transition-colors">How It Works</a>
           <a href="#for-sellers" className="hover:text-emerald-600 transition-colors">For Developers</a>
           <a href="#for-buyers" className="hover:text-emerald-600 transition-colors">For Buyers</a>
+          <a href="https://calendly.com/ceo-aethervibe/itc-consultation" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-600 transition-colors">
+            Book a Call
+          </a>
           <a href="#contact" className="bg-emerald-500 hover:bg-emerald-600 text-white px-4 py-2 rounded-lg transition-colors">
             Get Started
           </a>
@@ -32,6 +35,9 @@ export default function Nav() {
           <a href="#how-it-works" onClick={() => setOpen(false)}>How It Works</a>
           <a href="#for-sellers" onClick={() => setOpen(false)}>For Developers</a>
           <a href="#for-buyers" onClick={() => setOpen(false)}>For Buyers</a>
+          <a href="https://calendly.com/ceo-aethervibe/itc-consultation" target="_blank" rel="noopener noreferrer" onClick={() => setOpen(false)}>
+            Book a Call
+          </a>
           <a href="#contact" onClick={() => setOpen(false)} className="bg-emerald-500 text-white px-4 py-2 rounded-lg text-center">
             Get Started
           </a>

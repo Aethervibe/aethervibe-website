@@ -21,7 +21,12 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between items-center gap-3 text-xs">
-          <span>© 2026 Aethervibe · Powered by Aethermind LLC</span>
+          <div className="flex flex-col md:flex-row items-center gap-3">
+            <span>© 2026 Aethervibe · Powered by Aethermind LLC</span>
+            <span className="text-emerald-500/70 border border-emerald-500/20 px-2 py-0.5 rounded-full">
+              NY-BEST Member
+            </span>
+          </div>
           <div className="flex gap-6">
             <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-white transition-colors">Terms of Service</a>

@@ -43,6 +43,13 @@ export default function Hero() {
             </div>
           ))}
         </div>
+
+        <div className="mt-10 flex items-center justify-center gap-2 text-sm text-gray-500">
+          <span>Industry Member:</span>
+          <span className="text-emerald-400 font-semibold border border-emerald-500/30 bg-emerald-500/10 px-3 py-1 rounded-full text-xs tracking-wide">
+            NY-BEST · New York Battery & Energy Storage Technology Consortium
+          </span>
+        </div>
       </div>
     </section>
   );

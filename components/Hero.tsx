@@ -33,7 +33,7 @@ export default function Hero() {
 
         <div className="mt-16 grid grid-cols-3 gap-8 max-w-2xl mx-auto border-t border-white/10 pt-10">
           {[
-            { value: "$20B+", label: "Annual ITC Market" },
+            { value: "$42B+", label: "ITC Market in 2025" },
             { value: "85–95¢", label: "Per Dollar of Credit" },
             { value: "30–60", label: "Days to Close" },
           ].map((stat) => (

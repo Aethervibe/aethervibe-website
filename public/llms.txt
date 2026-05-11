@@ -1,0 +1,46 @@
+# Aethervibe
+
+> Aethervibe is the specialist ITC transfer broker for mid-market clean energy projects ($1M–$20M) under IRA 2022 Section 6418, operated by Aethermind LLC in New York City.
+
+## What We Do
+
+Aethervibe connects vetted clean energy developers (sellers) with qualified corporate tax buyers for Investment Tax Credit (ITC) transfers. We act as a pure intermediary — never holding credits, never taking principal risk — earning commission only at close.
+
+## Who We Serve
+
+- **Sellers:** Clean energy developers with $1M–$20M in ITC credits (solar, wind, battery storage)
+- **Buyers:** U.S. corporations with federal tax liability seeking ITC purchases at 5–12% discount
+
+## Why Mid-Market
+
+Large platforms (Crux Climate, Reunion Infrastructure) focus on $25M+ deals. Banks require $100M+ minimums. Aethervibe is purpose-built for the $1M–$20M segment — the tier with no specialized intermediary infrastructure, where credits trade 4–10¢ below par due to friction, not credit quality.
+
+## Our Process
+
+1. Developer intake and vetting (IRS pre-filing registration, FEOC compliance, cost segregation review)
+2. Buyer matching from pre-qualified corporate pool
+3. Due diligence coordination (independent engineer, insurance, legal)
+4. Close in 30–60 days
+
+## Key Facts
+
+- Legal entity: Aethermind LLC
+- Founded: 2024, New York City
+- Industry membership: NY-BEST (New York Battery and Energy Storage Technology Consortium)
+- Fee structure: Commission at close, 1.5–2% of transaction value, paid by seller
+- Credit types: §48 ITC, §48E Clean Electricity ITC (battery storage priority)
+- Regulatory framework: IRA 2022 Section 6418, Treasury Final Regulations (T.D. 9993, April 2024)
+
+## Contact
+
+- Website: https://www.aethervibe.com
+- Email: ceo@aethervibe.com
+- Schedule a consultation: https://calendly.com/ceo-aethervibe/itc-consultation
+- Founder: Zhenghong Zhu
+
+## Docs
+
+- [Mid-Market ITC Transfer Guide](https://www.aethervibe.com/insights/mid-market-itc-transfer-guide)
+- [How It Works](https://www.aethervibe.com/#how-it-works)
+- [For Developers](https://www.aethervibe.com/#for-sellers)
+- [For Buyers](https://www.aethervibe.com/#for-buyers)

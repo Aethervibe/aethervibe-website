@@ -11,6 +11,15 @@ export const metadata: Metadata = {
 
 const articles = [
   {
+    slug: "why-mid-market-itc-is-overlooked",
+    title: "Why the Sub-$20M ITC Transfer Market Is the Most Overlooked Opportunity in Clean Energy Right Now",
+    description:
+      "The $42B ITC transfer market has a blind spot: deals under $20M. With Evergrow gone and Crux focused on large institutions, the mid-market is wide open — and the opportunity is real.",
+    date: "May 2026",
+    readTime: "7 min read",
+    tag: "Market Analysis",
+  },
+  {
     slug: "mid-market-itc-transfer-guide",
     title: "The Mid-Market ITC Transfer Guide: Selling $1M–$20M in Clean Energy Credits",
     description:

@@ -1,23 +1,6 @@
 export default function Hero() {
   return (
     <section className="pt-32 pb-20 px-6 bg-gradient-to-br from-[#0F1F3D] to-[#1a3a6b] text-white">
-      {/* Albany Conference Banner */}
-      <div className="max-w-4xl mx-auto mb-8">
-        <div className="bg-emerald-500/10 border border-emerald-500/30 rounded-xl px-5 py-3 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <div className="flex items-center gap-3 text-sm">
-            <span className="text-emerald-400 font-semibold">📍 NY-BEST Albany Conference — May 12–14</span>
-            <span className="text-gray-400 hidden sm:inline">Meet us in Albany this week</span>
-          </div>
-          <a
-            href="https://calendly.com/ceo-aethervibe/itc-consultation"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-emerald-500 hover:bg-emerald-400 text-white text-sm font-semibold px-4 py-2 rounded-lg transition-colors whitespace-nowrap"
-          >
-            Book a 15-min slot →
-          </a>
-        </div>
-      </div>
 
       <div className="max-w-4xl mx-auto text-center">
         <div className="inline-block bg-emerald-500/20 text-emerald-300 text-sm font-semibold px-4 py-1.5 rounded-full mb-6 border border-emerald-500/30">

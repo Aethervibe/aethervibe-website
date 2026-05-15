@@ -54,6 +54,22 @@ const faqs = [
     q: "How do I get started with Aethervibe?",
     a: "Schedule a 15-minute consultation at calendly.com/ceo-aethervibe/itc-consultation. We'll discuss your project profile, ITC amount, timeline, and whether Aethervibe is a fit. If we proceed, we'll send you a mandate letter and begin the vetting and matching process.",
   },
+  {
+    q: "As a corporate buyer, how do I evaluate whether purchasing ITCs is right for my company?",
+    a: "ITC purchases work best for C-Corporations with meaningful federal income tax liability (generally $1M+ per year), a stable multi-year tax profile, and the ability to absorb the credit in the current or adjacent tax years. Credits can be carried back 3 years or forward 22 years, providing flexibility. S-Corps, partnerships, and pass-through entities can also participate but face additional complexity at the partner/shareholder level. We recommend buyers consult their tax counsel to confirm eligibility before committing to a transaction.",
+  },
+  {
+    q: "What documentation does a corporate buyer receive at closing?",
+    a: "At closing, buyers receive: (1) the executed Tax Credit Transfer Agreement (TCTA), (2) the IRS Pre-Filing Registration number confirming project eligibility, (3) the cost segregation report establishing ITC-eligible basis, (4) the tax credit insurance policy, (5) FEOC compliance documentation confirming the project's supply chain, and (6) the independent engineer report. Together, these documents form a closing binder that supports your tax return filing and satisfies IRS disclosure requirements under Notice 2023-29.",
+  },
+  {
+    q: "How are purchased ITCs reported on a corporate tax return?",
+    a: "The buyer reports the purchased ITC on IRS Form 3468 (Investment Credit) and attaches the required election statement under Section 6418. The seller's IRS registration number must appear on the buyer's return. The credit reduces federal income tax liability dollar-for-dollar in the year the transfer is made. Your tax advisor will handle the IRS disclosure election per the Treasury Final Regulations (T.D. 9993, April 2024).",
+  },
+  {
+    q: "Can I buy ITC credits if my company has minimal tax liability this year?",
+    a: "Yes — purchased ITCs can be carried back 3 years (to offset prior tax liabilities and potentially generate a refund) or carried forward 22 years to offset future tax liability. This makes ITC purchases viable even for companies in a low-tax year, as long as they have taxable income in adjacent years. Coordinate with your tax counsel to determine the optimal year of utilization before entering into a purchase agreement.",
+  },
 ];
 
 const faqSchema = {

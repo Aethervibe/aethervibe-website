@@ -11,6 +11,15 @@ export const metadata: Metadata = {
 
 const articles = [
   {
+    slug: "corporate-buyer-guide-itc-transfers",
+    title: "The Corporate Buyer's Guide to ITC Transfers: Reduce Your Tax Liability Through Clean Energy Credits",
+    description:
+      "How C-Corps and tax buyers purchase Investment Tax Credits under IRA Section 6418 — pricing at 88–95¢ on the dollar, due diligence checklist, recapture risk, and where to find deals under $20M.",
+    date: "May 2026",
+    readTime: "8 min read",
+    tag: "Buyer Guide",
+  },
+  {
     slug: "why-mid-market-itc-is-overlooked",
     title: "Why the Sub-$20M ITC Transfer Market Is the Most Overlooked Opportunity in Clean Energy Right Now",
     description:

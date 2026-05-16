@@ -35,13 +35,13 @@ export default function BuyerInquiryForm() {
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-semibold px-4 py-1.5 rounded-full mb-4">
             <span className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span>
-            1 Active Deal Available
+            Accepting Buyer Inquiries
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-[#0F1F3D] mb-4">
-            Request Current Deal Summary
+            Request a Deal Summary
           </h2>
           <p className="text-gray-500 max-w-xl mx-auto">
-            We have one active ITC opportunity available now. Leave your details and we'll send you the one-page deal summary within 24 hours.
+            We match qualified buyers with pre-vetted ITC opportunities. Leave your details and we'll send you a current deal summary within 24 hours.
           </p>
         </div>
 

@@ -11,6 +11,24 @@ export const metadata: Metadata = {
 
 const articles = [
   {
+    slug: "reduce-corporate-tax-clean-energy-credits",
+    title: "How to Reduce Your Company's Federal Tax Bill with Clean Energy Credits",
+    description:
+      "Most CFOs don't know their company can purchase clean energy tax credits directly from developers — paying roughly 90 cents to eliminate a dollar of federal taxes. No solar panels required.",
+    date: "May 2026",
+    readTime: "6 min read",
+    tag: "Corporate Finance",
+  },
+  {
+    slug: "itc-transfers-vs-tax-equity",
+    title: "ITC Transfers vs. Tax Equity: Which Is Right for Your Company?",
+    description:
+      "Tax equity requires ownership, 3–6 months, and a dedicated clean energy team. ITC transfers require only a wire transfer. For most corporations, the choice is becoming clear.",
+    date: "May 2026",
+    readTime: "7 min read",
+    tag: "Buyer Guide",
+  },
+  {
     slug: "corporate-buyer-guide-itc-transfers",
     title: "The Corporate Buyer's Guide to ITC Transfers: Reduce Your Tax Liability Through Clean Energy Credits",
     description:

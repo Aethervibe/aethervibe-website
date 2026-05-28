@@ -11,6 +11,15 @@ export const metadata: Metadata = {
 
 const articles = [
   {
+    slug: "bess-48e-itc-buyer-guide",
+    title: "The §48E Battery Storage ITC Buyer Guide: Why BESS Credits Are the Safest Bet After OBBBA",
+    description:
+      "Solar and wind ITCs are being phased out under OBBBA. Standalone §48E battery storage credits are fully protected through 2033. Here's what corporate buyers need to know about the new ITC landscape.",
+    date: "May 2026",
+    readTime: "10 min read",
+    tag: "Buyer Guide",
+  },
+  {
     slug: "reduce-corporate-tax-clean-energy-credits",
     title: "How to Reduce Your Company's Federal Tax Bill with Clean Energy Credits",
     description:

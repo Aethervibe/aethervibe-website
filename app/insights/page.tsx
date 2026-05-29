@@ -11,6 +11,15 @@ export const metadata: Metadata = {
 
 const articles = [
   {
+    slug: "tcta-legal-guide",
+    title: "The TCTA Explained: What Legal Counsel Actually Does in a §6418 ITC Transfer — and What It Costs",
+    description:
+      "Sell-side legal fees run $50–75K. Buyer counsel reimbursement adds $75–100K. Sign-and-close takes 30–60 days. A plain-English breakdown of the Tax Credit Transfer Agreement for developers and corporate buyers.",
+    date: "May 2026",
+    readTime: "8 min read",
+    tag: "Transaction Guide",
+  },
+  {
     slug: "bess-48e-itc-buyer-guide",
     title: "The §48E Battery Storage ITC Buyer Guide: Why BESS Credits Are the Safest Bet After OBBBA",
     description:

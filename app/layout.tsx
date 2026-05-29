@@ -95,7 +95,7 @@ export default function RootLayout({
       <body className={`${inter.className} min-h-full flex flex-col`}>
         {children}
         <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-YGH10W7ZNT"
+          src="https://www.googletagmanager.com/gtag/js?id=G-DKRE337RDZ"
           strategy="afterInteractive"
         />
         <Script id="google-analytics" strategy="afterInteractive">
@@ -103,7 +103,7 @@ export default function RootLayout({
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-YGH10W7ZNT');
+            gtag('config', 'G-DKRE337RDZ');
           `}
         </Script>
       </body>

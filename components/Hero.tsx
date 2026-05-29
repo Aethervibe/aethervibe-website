@@ -19,16 +19,18 @@ export default function Hero() {
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
-            href="#contact"
+            href="https://calendly.com/ceo-aethervibe/itc-consultation"
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-emerald-500 hover:bg-emerald-400 text-white font-semibold px-8 py-4 rounded-xl transition-colors text-lg"
           >
-            List Your ITC Project →
+            Schedule a Free Consultation →
           </a>
           <a
-            href="#contact"
+            href="#how-it-works"
             className="bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-4 rounded-xl transition-colors text-lg border border-white/20"
           >
-            Find ITC Opportunities
+            See How It Works
           </a>
         </div>
 
@@ -45,11 +47,16 @@ export default function Hero() {
           ))}
         </div>
 
-        <div className="mt-10 flex items-center justify-center gap-2 text-sm text-gray-500">
-          <span>Industry Member:</span>
-          <span className="text-emerald-400 font-semibold border border-emerald-500/30 bg-emerald-500/10 px-3 py-1 rounded-full text-xs tracking-wide">
-            NY-BEST · New York Battery & Energy Storage Technology Consortium
-          </span>
+        <div className="mt-10 flex flex-col items-center gap-4">
+          <p className="text-xs text-gray-500 uppercase tracking-widest">Trusted Partners & Affiliations</p>
+          <div className="flex flex-wrap items-center justify-center gap-4">
+            <span className="text-white/70 font-semibold border border-white/20 bg-white/5 px-4 py-2 rounded-lg text-sm tracking-wide">
+              CohnReznick · Renewable Energy Advisory
+            </span>
+            <span className="text-emerald-400 font-semibold border border-emerald-500/30 bg-emerald-500/10 px-4 py-2 rounded-lg text-sm tracking-wide">
+              NY-BEST · Energy Storage Consortium
+            </span>
+          </div>
         </div>
       </div>
     </section>

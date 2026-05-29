@@ -16,11 +16,13 @@ export default function Nav() {
           <a href="#for-sellers" className="hover:text-emerald-600 transition-colors">For Developers</a>
           <a href="#for-buyers" className="hover:text-emerald-600 transition-colors">For Buyers</a>
           <a href="/insights" className="hover:text-emerald-600 transition-colors">Insights</a>
-          <a href="https://calendly.com/ceo-aethervibe/itc-consultation" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-600 transition-colors">
+          <a
+            href="https://calendly.com/ceo-aethervibe/itc-consultation"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-emerald-500 hover:bg-emerald-600 text-white px-4 py-2 rounded-lg transition-colors"
+          >
             Book a Call
-          </a>
-          <a href="#contact" className="bg-emerald-500 hover:bg-emerald-600 text-white px-4 py-2 rounded-lg transition-colors">
-            Get Started
           </a>
         </div>
 

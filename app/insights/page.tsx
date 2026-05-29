@@ -11,6 +11,15 @@ export const metadata: Metadata = {
 
 const articles = [
   {
+    slug: "itc-insurance-guide",
+    title: "Tax Credit Insurance in a §48E ITC Transfer: What It Covers, What It Costs, and What Underwriters Need",
+    description:
+      "All-in cost is approximately 8% of coverage. Nine covered tax positions. FEOC is excluded. The complete market-standard framework for tax credit insurance in a §6418 transfer — what buyers need, what sellers must prepare, and how the premium breaks down.",
+    date: "May 2026",
+    readTime: "8 min read",
+    tag: "Transaction Guide",
+  },
+  {
     slug: "tcta-legal-guide",
     title: "The TCTA Explained: What Legal Counsel Actually Does in a §6418 ITC Transfer — and What It Costs",
     description:

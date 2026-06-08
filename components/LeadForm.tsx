@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { trackEvent } from "@/lib/gtag";
 
 export default function LeadForm() {
   const [role, setRole] = useState<"seller" | "buyer" | "">("");
@@ -11,6 +12,7 @@ export default function LeadForm() {
     setLoading(true);
     const form = e.currentTarget;
     const data = new FormData(form);
+    trackEvent("lead_submit", { lead_role: role || "unspecified" });
 
     try {
       await fetch("https://formspree.io/f/myklndln", {

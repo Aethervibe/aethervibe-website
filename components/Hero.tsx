@@ -1,3 +1,6 @@
+"use client";
+import { trackEvent } from "@/lib/gtag";
+
 export default function Hero() {
   return (
     <section className="pt-32 pb-20 px-6 bg-gradient-to-br from-[#0F1F3D] to-[#1a3a6b] text-white">
@@ -22,6 +25,7 @@ export default function Hero() {
             href="https://calendly.com/ceo-aethervibe/itc-consultation"
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => trackEvent("book_call", { location: "hero" })}
             className="bg-emerald-500 hover:bg-emerald-400 text-white font-semibold px-8 py-4 rounded-xl transition-colors text-lg"
           >
             Schedule a Free Consultation →
@@ -37,7 +41,7 @@ export default function Hero() {
         <div className="mt-16 grid grid-cols-3 gap-8 max-w-2xl mx-auto border-t border-white/10 pt-10">
           {[
             { value: "$42B+", label: "ITC Market in 2025" },
-            { value: "85–95¢", label: "Per Dollar of Credit" },
+            { value: "$1M–$20M", label: "Mid-Market Focus" },
             { value: "30–60", label: "Days to Close" },
           ].map((stat) => (
             <div key={stat.label}>

@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { trackEvent } from "@/lib/gtag";
 
 export default function BuyerInquiryForm() {
   const [submitted, setSubmitted] = useState(false);
@@ -12,6 +13,11 @@ export default function BuyerInquiryForm() {
     const data = new FormData(form);
     data.append("_subject", "New Buyer Inquiry — Deal Summary Request");
     data.append("role", "buyer");
+    trackEvent("buyer_inquiry", {
+      form: "deal_summary_request",
+      buyer_role: data.get("buyer_role")?.toString() || "unspecified",
+      tax_liability: data.get("tax_liability")?.toString() || "unspecified",
+    });
 
     try {
       await fetch("https://formspree.io/f/myklndln", {
@@ -55,12 +61,12 @@ export default function BuyerInquiryForm() {
 
             <div className="space-y-4 mb-8">
               {[
-                { label: "Credit Type", value: "§48 Battery Storage ITC" },
-                { label: "Transaction Size", value: "$20M – $30M" },
-                { label: "Structure", value: "Single tranche" },
-                { label: "Target Close", value: "Q3 2026" },
+                { label: "Credit Type", value: "§48E Battery Storage ITC" },
+                { label: "Credit Amount", value: "$3.4M" },
+                { label: "Portfolio", value: "290 residential systems · California" },
+                { label: "Effective Rate", value: "40% (30% bonus + 10% adder)" },
                 { label: "Documentation", value: "IRS registration ✓  Cost seg ✓  Insurance ✓" },
-                { label: "Indicative Pricing", value: "88–92¢ per $1 of credit" },
+                { label: "Indicative Pricing", value: "Shared under NDA" },
               ].map((item) => (
                 <div key={item.label} className="flex justify-between gap-4 py-3 border-b border-white/10 last:border-0">
                   <span className="text-gray-400 text-sm">{item.label}</span>
@@ -70,9 +76,9 @@ export default function BuyerInquiryForm() {
             </div>
 
             <div className="bg-emerald-500/10 border border-emerald-500/30 rounded-xl p-4">
-              <div className="text-emerald-300 text-xs font-semibold mb-1">Buyer ROI (illustrative)</div>
+              <div className="text-emerald-300 text-xs font-semibold mb-1">How the economics work</div>
               <div className="text-white text-sm">
-                Purchase $20M in credits at 90¢ → spend $18M, save $20M in federal taxes → <span className="text-emerald-400 font-bold">$2M net benefit</span>
+                Buy $3.4M in credits below face value → offset $3.4M of federal tax dollar-for-dollar → your net benefit is the spread. <span className="text-emerald-400 font-bold">Exact pricing shared under NDA.</span>
               </div>
             </div>
           </div>

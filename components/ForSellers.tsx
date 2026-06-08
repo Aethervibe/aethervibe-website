@@ -2,7 +2,7 @@ const benefits = [
   {
     icon: "💰",
     title: "Competitive Pricing",
-    description: "Access vetted corporate buyers willing to pay 85–95¢ on the dollar for your ITC credits.",
+    description: "Access vetted corporate buyers competing for your ITC credits at strong, market-based pricing.",
   },
   {
     icon: "✅",
@@ -35,8 +35,9 @@ export default function ForSellers() {
             </h2>
             <p className="text-gray-500 mb-8 leading-relaxed">
               You built the project. Now get full value for your tax credits.
-              Aethervibe connects you directly with corporate buyers—no brokers
-              taking unnecessary cuts, no opaque pricing.
+              Aethervibe connects you with pre-qualified corporate buyers —
+              transparent pricing, verified compliance, and a structured process
+              built to close in 30–60 days.
             </p>
             <a
               href="#contact"

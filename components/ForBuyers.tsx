@@ -2,7 +2,7 @@ const benefits = [
   {
     icon: "🏦",
     title: "Dollar-for-Dollar Tax Reduction",
-    description: "ITC credits reduce your federal tax liability at a 1:1 ratio—purchased at 85–95¢ on the dollar.",
+    description: "ITC credits reduce your federal tax liability at a 1:1 ratio—purchased below face value, with exact pricing shared under NDA.",
   },
   {
     icon: "🔍",

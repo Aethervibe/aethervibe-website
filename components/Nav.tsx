@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { trackEvent } from "@/lib/gtag";
 
 export default function Nav() {
   const [open, setOpen] = useState(false);
@@ -20,6 +21,7 @@ export default function Nav() {
             href="https://calendly.com/ceo-aethervibe/itc-consultation"
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => trackEvent("book_call", { location: "nav_desktop" })}
             className="bg-emerald-500 hover:bg-emerald-600 text-white px-4 py-2 rounded-lg transition-colors"
           >
             Book a Call
@@ -39,7 +41,7 @@ export default function Nav() {
           <a href="#for-sellers" onClick={() => setOpen(false)}>For Developers</a>
           <a href="#for-buyers" onClick={() => setOpen(false)}>For Buyers</a>
           <a href="/insights" onClick={() => setOpen(false)}>Insights</a>
-          <a href="https://calendly.com/ceo-aethervibe/itc-consultation" target="_blank" rel="noopener noreferrer" onClick={() => setOpen(false)}>
+          <a href="https://calendly.com/ceo-aethervibe/itc-consultation" target="_blank" rel="noopener noreferrer" onClick={() => { trackEvent("book_call", { location: "nav_mobile" }); setOpen(false); }}>
             Book a Call
           </a>
           <a href="#contact" onClick={() => setOpen(false)} className="bg-emerald-500 text-white px-4 py-2 rounded-lg text-center">

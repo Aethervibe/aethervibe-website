@@ -11,6 +11,15 @@ export const metadata: Metadata = {
 
 const articles = [
   {
+    slug: "sub-5m-48e-tax-credit-gap",
+    title: "The Sub-$5M Gap: Where Small Clean-Energy Tax Credits Go in 2026",
+    description:
+      "As transfer platforms move upmarket toward §45X and nine-figure deals, a structural gap has opened for sub-$5M §48E solar and storage credits. The supply is growing through third-party ownership — and a new pool of mid-market buyers is forming.",
+    date: "June 2026",
+    readTime: "7 min read",
+    tag: "Market Analysis",
+  },
+  {
     slug: "itc-insurance-guide",
     title: "Tax Credit Insurance in a §48E ITC Transfer: What It Covers, What It Costs, and What Underwriters Need",
     description:

@@ -11,6 +11,16 @@ export const metadata: Metadata = {
 
 const articles = [
   {
+    slug: "sub-5m-itc-monetization-which-path-pencils",
+    title:
+      "The Sub-$5M Developer's ITC Monetization Guide: Which Path Actually Pencils in 2026",
+    description:
+      "For a sub-$5M ITC, four of the five monetization paths quietly lose you money. Why straight §6418 transfer is the only one that pencils — and the aggregation lever that adds 6–8¢ to your net price, often a six-figure swing on the same credit.",
+    date: "June 2026",
+    readTime: "10 min read",
+    tag: "Developer Guide",
+  },
+  {
     slug: "sub-5m-48e-tax-credit-gap",
     title: "The Sub-$5M Gap: Where Small Clean-Energy Tax Credits Go in 2026",
     description:

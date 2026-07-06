@@ -11,6 +11,16 @@ export const metadata: Metadata = {
 
 const articles = [
   {
+    slug: "section-6418-cpa-playbook-closely-held-c-corps",
+    title:
+      "Section 6418 for Closely-Held C-Corporations: The CPA Playbook for the Segment Big Firms Overlook",
+    description:
+      "After CAMT taxed the largest buyers out of the transferable-credit market, the cleanest remaining fit is the closely-held C-corp on your own client roster. A practical playbook for CPAs — the two hats, the fact patterns, the real limitations, and where the advisor sits.",
+    date: "July 2026",
+    readTime: "11 min read",
+    tag: "For CPAs & Advisors",
+  },
+  {
     slug: "sub-5m-itc-monetization-which-path-pencils",
     title:
       "The Sub-$5M Developer's ITC Monetization Guide: Which Path Actually Pencils in 2026",

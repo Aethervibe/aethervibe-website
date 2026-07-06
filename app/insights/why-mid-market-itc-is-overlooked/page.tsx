@@ -16,9 +16,79 @@ export const metadata: Metadata = {
   },
 };
 
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline:
+    "Why the Sub-$20M ITC Transfer Market Is the Most Overlooked Opportunity in Clean Energy Right Now",
+  description:
+    "The $42B ITC transfer market has a blind spot: deals under $20M. With Evergrow gone and Crux focused on large institutions, the mid-market is wide open. Here's why that matters.",
+  author: { "@type": "Organization", name: "Aethervibe" },
+  publisher: { "@type": "Organization", name: "Aethervibe" },
+  datePublished: "2026-05-01",
+  mainEntityOfPage:
+    "https://www.aethervibe.com/insights/why-mid-market-itc-is-overlooked",
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "Why is the sub-$20M ITC transfer market underserved?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The largest platforms focus up-market: Crux's sweet spot is $25M to $100M per transaction and Reunion's average deal has exceeded $65M, while banks and major financial institutions won't touch anything under $100M because the legal overhead makes smaller deals uneconomic. As a result, a developer with $5M or $12M in ITCs is too small for the institutions and too complex for a casual bilateral deal.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What happened after Evergrow exited the market?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Evergrow built a marketplace for deals as small as $660K and had listed over $150M in credits before shutting down in September 2025, a closure publicly attributed to an inability to achieve venture scale. Its exit removed the only dedicated marketplace for sub-$20M ITC transactions, leaving the developers, credits, and demand it served without a home.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Why are sub-$20M ITC deals actually attractive?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Smaller deals often have cleaner credit profiles — many sellers are residential and commercial §48E storage developers with simpler supply chains and lower FEOC exposure. Well-documented deals can close in 30 to 45 days versus 90 to 120 for large institutional transactions, and because major platforms chase $50M-plus opportunities, buyers face far less competition and can negotiate better pricing.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What is the developer's main pain point in small deals?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The pain is administrative overhead, not finding a buyer. Developers generating $20M in annual ITCs typically produce them in quarterly tranches of $2M to $5M, and each transfer requires a separately negotiated Tax Credit Transfer Agreement. Selling four tranches separately means paying legal fees four times, with legal costs alone consuming 1 to 3% of a small tranche's value.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How should sub-$20M transactions be structured?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The solution is to structure the transaction differently from the start: consolidate annual credits into a single-tranche transfer with one TCTA and one closing, work with a broker who has pre-qualified buyers matched to the deal's sector and size, and use accelerated diligence with parallel workstreams when cost segregation and insurance are already in place.",
+      },
+    },
+  ],
+};
+
 export default function WhyMidMarketITCIsOverlooked() {
   return (
     <main className="min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+
       {/* Header */}
       <div className="bg-gradient-to-br from-[#0F1F3D] to-[#1a3a6b] text-white py-20 px-6">
         <div className="max-w-3xl mx-auto">

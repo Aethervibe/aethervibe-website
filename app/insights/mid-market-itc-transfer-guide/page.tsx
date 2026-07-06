@@ -16,9 +16,79 @@ export const metadata: Metadata = {
   },
 };
 
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline:
+    "The Mid-Market ITC Transfer Guide: Selling $1M–$20M in Clean Energy Credits",
+  description:
+    "A complete guide to selling $1M–$20M in Investment Tax Credits (ITC) under IRA Section 6418. Learn how mid-market transfers work, why credits trade at a discount, and how to close in 30–60 days.",
+  author: { "@type": "Organization", name: "Aethervibe" },
+  publisher: { "@type": "Organization", name: "Aethervibe" },
+  datePublished: "2026-05-01",
+  mainEntityOfPage:
+    "https://www.aethervibe.com/insights/mid-market-itc-transfer-guide",
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What is an ITC transfer under Section 6418?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Section 6418 of the Internal Revenue Code, added by the IRA in 2022, allows an eligible taxpayer such as a clean energy developer to transfer all or part of an Investment Tax Credit to an unrelated corporate buyer for cash, and the buyer applies the credit dollar-for-dollar against federal tax liability. Key rules include one-time transfer only, cash consideration only, unrelated parties only, mandatory IRS pre-filing registration, and an irrevocable election.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Why do mid-market ITC credits trade at a discount to large deals?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The gap is a structural market failure rather than a credit quality issue. Fixed costs that fall disproportionately on smaller deals — insurance minimum premiums, fixed legal costs regardless of deal size, and a thin buyer pool at this scale — push mid-market pricing below par; credits are purchased at a discount to face value and the buyer captures the spread. A specialist broker narrows the gap by aggregating buyers and spreading legal infrastructure across deal flow.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What are the stages of a mid-market ITC transfer?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "A well-run transfer closes in 30–60 days across four stages: Register and Verify (both parties complete IRS pre-filing registration through the Energy Credits Online portal), Match (the credit profile is matched to a pre-qualified buyer pool), Due Diligence (buyer's tax counsel reviews cost basis, placed-in-service date, PWA and FEOC documentation, recapture and indemnity, while insurance runs in parallel), and Close (agreement executed, funds wired, election filed on both returns).",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What is FEOC compliance and why does it matter for ITC transfers?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "OBBBA introduced Prohibited Foreign Entity restrictions that apply to projects beginning construction after December 31, 2025. If a project uses components from companies with significant restricted-nation ownership, the credits may be partially or fully disqualified, so every transfer now requires supplier certification, ownership structure review of the developer and buyer, and Material Assistance Cost Ratio documentation.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What are the key risks to manage in an ITC transfer?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The main risks are recapture risk under the 5-year declining schedule if the property is disposed of or loses eligibility, the 20% excessive credit transfer penalty on any disallowed amount under §6418(g)(2), ECO portal errors such as entity name mismatches or filing before registration is complete, and OBBBA timeline pressure for wind and solar projects, while battery storage remains eligible through 2033.",
+      },
+    },
+  ],
+};
+
 export default function MidMarketITCGuide() {
   return (
     <main className="min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+
       {/* Header */}
       <div className="bg-gradient-to-br from-[#0F1F3D] to-[#1a3a6b] text-white py-20 px-6">
         <div className="max-w-3xl mx-auto">

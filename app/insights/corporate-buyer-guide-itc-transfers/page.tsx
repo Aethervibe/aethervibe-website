@@ -16,9 +16,79 @@ export const metadata: Metadata = {
   },
 };
 
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline:
+    "The Corporate Buyer's Guide to ITC Transfers: How to Reduce Your Tax Liability Through Clean Energy Credits",
+  description:
+    "How C-Corps and tax buyers purchase Investment Tax Credits from clean energy developers under IRA Section 6418 — pricing, due diligence, risks, and how to find deals under $20M.",
+  author: { "@type": "Organization", name: "Aethervibe" },
+  publisher: { "@type": "Organization", name: "Aethervibe" },
+  datePublished: "2026-05-01",
+  mainEntityOfPage:
+    "https://www.aethervibe.com/insights/corporate-buyer-guide-itc-transfers",
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What changed in 2022 for corporations buying ITCs?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Before 2022, Investment Tax Credits from clean energy projects could only be used by the developer or by a tax equity investor who took an ownership stake. Under the Inflation Reduction Act's Section 6418, developers can now transfer their ITCs directly to unrelated corporations for cash — no ownership stake, no partnership, no tax equity structure. The buying corporation applies the credits dollar-for-dollar against its federal income tax bill.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What credit types can buyers purchase?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The most commonly traded mid-market credits are the §48 Investment Tax Credit for solar, battery storage, EV charging, and small wind, and the §48E Clean Electricity ITC for post-2025 clean electricity projects, primarily battery storage. Battery storage credits under §48E are among the most sought-after because they offer documentation certainty and minimal FEOC risk.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What should buyers verify during due diligence?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Buyers should confirm the seller's IRS Pre-Filing Registration and registration number, a cost segregation study establishing ITC-eligible basis, FEOC compliance documentation, tax credit insurance, and seller indemnification in the Tax Credit Transfer Agreement. The credit is tied to a physical project that must remain qualified for five years to avoid recapture.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How does recapture risk work?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Recapture exposure declines by 20% each year over five years, after which the credit is fully vested and recapture risk is zero. The risk is further mitigated by seller indemnification clauses in the TCTA, tax credit insurance, and the fact that recapture events are rare, requiring the seller to sell the project or substantially change how it operates.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How are purchased ITCs reported on a tax return?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The buyer reports the purchased ITC on IRS Form 3468, with the seller's IRS registration number appearing on the buyer's return, and retains the TCTA and supporting documentation as records. The credit reduces the buyer's regular tax liability dollar-for-dollar in the year the transfer is made, coordinated with the disclosure election under IRS Notice 2023-29 and the final Treasury Regulations (T.D. 9993).",
+      },
+    },
+  ],
+};
+
 export default function CorporateBuyerGuide() {
   return (
     <main className="min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+
       {/* Header */}
       <div className="bg-gradient-to-br from-[#0F1F3D] to-[#1a3a6b] text-white py-20 px-6">
         <div className="max-w-3xl mx-auto">

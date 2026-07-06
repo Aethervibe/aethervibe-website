@@ -28,15 +28,15 @@ const faqSchema = {
       name: "How do small solar developers monetize their Investment Tax Credit?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "For project ITCs under approximately $5M, the only path that reliably pencils is a straight §6418 transfer. Traditional and hybrid tax equity require ~$75M minimum holds (implying $34M+ in ITC), and structured alternatives like preferred equity monetization or FMV step-up structures add fixed legal and appraisal costs that destroy the economics on a small credit.",
+        text: "For project ITCs under approximately $5M, the only path that reliably pencils is a straight §6418 transfer. Traditional and hybrid tax equity carry minimum-scale floors that put them two orders of magnitude out of reach, and structured alternatives like preferred equity monetization or FMV step-up structures add fixed legal, appraisal, and administration costs that eat the economics on a small credit.",
       },
     },
     {
       "@type": "Question",
-      name: "What price do small ITCs sell for in 2026?",
+      name: "Why do small ITCs net less than large ones?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Per Reunion's Q3 2025 Market Monitor and Crux transferable credit reports, §48 ITCs in the $5M–$25M range trade around $0.90–$0.93 on the dollar. Credits under $1M trade at approximately 84–86¢ due to fixed transaction costs. After legal, insurance, broker, and cost-segregation expenses, a standalone $1.5M ITC typically nets around 82¢.",
+        text: "The credit itself is identical regardless of size. The gap exists because the fixed costs of getting a credit sold — legal, insurance, broker or platform fees, and a cost segregation study — are nearly the same whether the credit is $500K or $10M. Spread over a small face value, those fixed costs consume a larger share of the proceeds, so a standalone small credit nets meaningfully below what a large credit clears.",
       },
     },
     {
@@ -44,7 +44,7 @@ const faqSchema = {
       name: "How does aggregating projects improve ITC transfer pricing?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Pooling a small credit into a $10M+ combined portfolio transfer spreads fixed legal, insurance, and tax-opinion costs across a larger face value. A $1.5M ITC that nets ~82¢ as a standalone sale can clear at ~88–90¢ net within an aggregated transfer — roughly a $90K–$120K improvement on the same credit.",
+        text: "Pooling a small credit into a larger combined portfolio transfer — alongside other small developers, under a single transfer agreement, tax opinion, and insurance binder — spreads the fixed legal, insurance, and tax-opinion costs across a much larger face value. The same credit clears at institutional-grade net pricing rather than the standalone small-credit level, a six-figure swing on the same credit with nothing changed but the wrapper.",
       },
     },
     {
@@ -52,7 +52,7 @@ const faqSchema = {
       name: "What does a developer need to make an ITC sellable?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Five non-negotiables: (1) a third-party cost segregation or eligible-basis study; (2) an IRS pre-filing registration number from the Energy Credits Online portal, filed at least 120 days before the return due date; (3) PWA compliance or a documented under-1-MW exemption; (4) FEOC compliance — §48 legacy projects are more liquid, while §48E projects must meet the Material Assistance Cost Ratio (40% non-PFE for facilities, 55% for storage in 2026); (5) a tax opinion with reps & warranties, and typically tax credit insurance.",
+        text: "Five non-negotiables: (1) a third-party cost segregation or eligible-basis study; (2) an IRS pre-filing registration number from the Energy Credits Online portal, filed at least 120 days before the return due date; (3) PWA compliance or a documented under-1-MW exemption; (4) FEOC compliance — §48 legacy projects are more liquid, while §48E projects must meet the Material Assistance Cost Ratio (40% non-PFE for facilities, 55% for storage in 2026); (5) a tax opinion with reps and warranties, and typically tax credit insurance.",
       },
     },
     {
@@ -60,10 +60,24 @@ const faqSchema = {
       name: "How do forward commitments and bridge loans help with cash timing?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "A credit only exists at placed-in-service, creating a 6–18 month cash gap. An uncovered bridge loan against an expected credit advances roughly 67.5¢ on the dollar; a bridge loan backed by a forward commitment from a real buyer advances around 88¢ — a 30–50% increase in available capital. Approximately 1 in 5 deals in 2024 used a forward commitment, mostly to support bridge financing.",
+        text: "A credit only legally exists at placed-in-service, creating a 6–18 month cash gap between when a developer needs capital and when the credit is sellable. A forward commitment locks in a buyer at a specified price today, which in turn lets a bridge loan advance materially more against the same expected credit than an uncovered bridge would. The practical takeaway is to find the buyer at construction start rather than at placed-in-service.",
       },
     },
   ],
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline:
+    "The Sub-$5M Developer's ITC Monetization Guide: Which Path Actually Pencils in 2026",
+  description:
+    "If your project ITC is under $5M, four of the five monetization paths quietly lose you money. Here's why straight §6418 transfer is the only one that pencils — and the one lever that closes the pricing gap.",
+  author: { "@type": "Organization", name: "Aethervibe" },
+  publisher: { "@type": "Organization", name: "Aethervibe" },
+  datePublished: "2026-06-01",
+  mainEntityOfPage:
+    "https://www.aethervibe.com/insights/sub-5m-itc-monetization-which-path-pencils",
 };
 
 export default function Sub5MITCMonetizationWhichPathPencils() {
@@ -72,6 +86,10 @@ export default function Sub5MITCMonetizationWhichPathPencils() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
 
       {/* Header */}

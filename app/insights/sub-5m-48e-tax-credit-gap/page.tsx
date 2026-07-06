@@ -47,7 +47,37 @@ const faqSchema = {
         text: "No. It is growing. The §25D homeowner credit ended December 31, 2025, shifting residential solar into third-party-ownership structures that generate transferable §48E credits. Standalone battery storage under §48E has no accelerated sunset and remains eligible through 2033.",
       },
     },
+    {
+      "@type": "Question",
+      name: "Why do small §48E deals fall through the cracks with large platforms?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The costs of executing a transfer — legal, insurance, and diligence — are largely fixed, so a small deal and a large deal require much of the same paperwork, opinion, and underwriting review. On a large deal those fixed costs are a rounding error; on a small deal they can consume the economics, which is why standardized platforms and large insurers gravitate upmarket toward institutional-scale deal flow.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How do small §48E credit transfers get done safely?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The same risk tools that protect institutional buyers apply at the small end when used with discipline: a clean tax opinion establishing eligibility and placed-in-service basis, a seller indemnity backing the representations, and tax credit insurance where the deal warrants it — often made economical by structuring credits at the portfolio level rather than one-off. The difference is execution by a partner who specializes in this size.",
+      },
+    },
   ],
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline:
+    "The Sub-$5M Gap: Where Small Clean-Energy Tax Credits Go in 2026",
+  description:
+    "As transfer platforms move upmarket toward §45X and nine-figure deals, a structural gap has opened for sub-$5M §48E solar and storage credits. Here's what's happening in 2026 — and who serves this market.",
+  author: { "@type": "Organization", name: "Aethervibe" },
+  publisher: { "@type": "Organization", name: "Aethervibe" },
+  datePublished: "2026-06-01",
+  mainEntityOfPage:
+    "https://www.aethervibe.com/insights/sub-5m-48e-tax-credit-gap",
 };
 
 export default function Sub5M48ETaxCreditGap() {
@@ -56,6 +86,10 @@ export default function Sub5M48ETaxCreditGap() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
 
       {/* Header */}

@@ -16,9 +16,78 @@ export const metadata: Metadata = {
   },
 };
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "Why is tax credit insurance needed in a §6418 ITC transfer?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "In a §6418 transfer the buyer claims the credits on its own return, so if the IRS later disallows, reduces, or recaptures them, it is the buyer's return that is at risk. Tax credit insurance indemnifies the buyer against those specific risks. Without it, the buyer's only recourse is the seller's contractual indemnity, which is only as good as the seller's balance sheet — so in practice experienced buyers and their counsel treat insurance as a market requirement.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What does tax credit insurance for a §48E transfer cover?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Coverage is limited to a specific enumerated set of Covered Tax Positions rather than blanket protection. For a §48E residential BESS portfolio these typically include credit validity (no disallowance or diminishment), qualification as energy property, the eligible tax basis and its allocation, the begin-construction date, the enhanced-rate sub-1MW exemption, depreciation basis, the placed-in-service date, and no recapture under §50 during the five-year recapture period.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Is FEOC compliance covered by tax credit insurance?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "No. FEOC (Foreign Entity of Concern) compliance is the most important exclusion in current market-standard §48E BESS policies — underwriters have explicitly excluded FEOC-related credit challenges. FEOC risk instead has to be addressed through seller representations and warranties in the TCTA, and buyers' counsel will typically ask for a FEOC compliance memo.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What documentation do underwriters need before binding coverage?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The standard submission package includes a project financial model showing the ITC calculation and eligible basis, an independent cost segregation study, a CIM or portfolio overview, IRS Energy Credits Online registration confirmation, placed-in-service documentation, a draft term sheet or TCTA, property-and-casualty insurance confirmation, and lender confirmation. A complete package for a well-documented residential BESS portfolio takes a minimum of 3–4 weeks to reach formal market quotes.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Why must the buyer be a named insured on the policy?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "If the policy is issued solely in the seller's name, the buyer has no direct recourse against the insurer should the seller become insolvent or fail to pass through a claim payment. Market-standard practice is to list the buyer as a named insured or issue the policy directly in the buyer's favor, giving the buyer a direct contractual relationship with the insurer independent of the seller's financial health.",
+      },
+    },
+  ],
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline:
+    "Tax Credit Insurance in a §48E ITC Transfer: What It Covers, What It Costs, and What Underwriters Need",
+  description:
+    "Market-standard tax credit insurance for §6418 ITC transfers runs approximately 8% all-in. Here is exactly what the nine covered tax positions are, how the premium breaks down, and what documentation underwriters require before binding coverage.",
+  author: { "@type": "Organization", name: "Aethervibe" },
+  publisher: { "@type": "Organization", name: "Aethervibe" },
+  datePublished: "2026-05-01",
+  mainEntityOfPage: "https://www.aethervibe.com/insights/itc-insurance-guide",
+};
+
 export default function ITCInsuranceGuide() {
   return (
     <main className="min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+
       {/* Header */}
       <div className="bg-gradient-to-br from-[#0F1F3D] to-[#1a3a6b] text-white py-20 px-6">
         <div className="max-w-3xl mx-auto">

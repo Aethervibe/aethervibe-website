@@ -16,9 +16,79 @@ export const metadata: Metadata = {
   },
 };
 
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline:
+    "ITC Transfers vs. Tax Equity: Which Is Right for Your Company?",
+  description:
+    "Tax equity and ITC transfers both let corporations benefit from clean energy. But they work very differently — in cost, complexity, timeline, and risk. Here's a direct comparison for corporate tax teams.",
+  author: { "@type": "Organization", name: "Aethervibe" },
+  publisher: { "@type": "Organization", name: "Aethervibe" },
+  datePublished: "2026-05-01",
+  mainEntityOfPage:
+    "https://www.aethervibe.com/insights/itc-transfers-vs-tax-equity",
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What is the difference between an ITC transfer and tax equity?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Tax equity means taking an ownership stake in a clean energy project through a partnership or flip structure. An ITC transfer under Section 6418 is a straight cash purchase of the tax credits with no ownership, no partnership, and no long-term lock-up. The transfer separates the tax benefit from the ownership obligation, letting a corporation participate the way it would buy any other financial instrument — with a wire transfer and a contract.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Which is faster and simpler to close?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "ITC transfers are faster and simpler. A transfer typically closes in 30 to 60 days using standardized TCTA documentation and moderate legal complexity, while tax equity generally takes three to six months due to partnership negotiation and flip mechanics. Tax equity also requires in-house clean energy finance expertise, whereas an ITC transfer only requires tax counsel to review the TCTA.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "When does tax equity still make sense?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Tax equity remains the right tool for very large credit appetites above $50M, for Production Tax Credits under §45 and §45Y that cannot be transferred and must be allocated through tax equity, and for companies that genuinely want project ownership for operational data, ESG narrative, or long-term energy supply. Wind projects are still primarily financed through tax equity.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How should a company decide between the two?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Work through a short decision tree: if you want to own the project, choose tax equity; if your credit appetite exceeds $50M per year or you have a dedicated clean energy investment team, tax equity may be feasible; otherwise, for a C-corporation that pays federal income taxes, ITC transfers are the fastest and most cost-effective path.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Who is best served in the mid-market ITC transfer segment?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The institutional end of the market, above $25M, is well-served by large platforms and bank intermediaries. The mid-market — deals between $1M and $20M — has historically been underserved, with limited infrastructure connecting qualified buyers to vetted sellers. Aethervibe operates specifically in this segment, pre-vetting developers and presenting corporate buyers with ready-to-close opportunities.",
+      },
+    },
+  ],
+};
+
 export default function ITCTransfersVsTaxEquity() {
   return (
     <main className="min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+
       {/* Header */}
       <div className="bg-gradient-to-br from-[#0F1F3D] to-[#1a3a6b] text-white py-20 px-6">
         <div className="max-w-3xl mx-auto">

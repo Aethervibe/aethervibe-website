@@ -16,9 +16,78 @@ export const metadata: Metadata = {
   },
 };
 
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline:
+    "The TCTA Explained: What Legal Counsel Actually Does in a §6418 ITC Transfer — and What It Costs",
+  description:
+    "What does a Tax Credit Transfer Agreement actually involve? Sell-side legal costs run $50–75K, buyer reimbursement adds $75–100K, and sign-to-close takes 30–60 days. A plain-English breakdown for developers and buyers.",
+  author: { "@type": "Organization", name: "Aethervibe" },
+  publisher: { "@type": "Organization", name: "Aethervibe" },
+  datePublished: "2026-05-01",
+  mainEntityOfPage: "https://www.aethervibe.com/insights/tcta-legal-guide",
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What is a Tax Credit Transfer Agreement (TCTA)?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "In a §6418 ITC transfer, the TCTA is the transaction itself, not a side document. Every right, obligation, risk allocation, and protection that the seller and buyer have flows from this agreement, so understanding its structure, legal fees, and timeline is essential before entering the ITC market.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Who retains legal counsel in a §6418 ITC transfer, and who pays?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Both sides retain independent legal counsel; sharing counsel is not market practice. The developer (seller) engages transaction counsel to draft the TCTA, prepare the IRS transfer election, coordinate the cost segregation study and insurance, and manage closing, and the seller typically also reimburses the buyer's legal fees as part of the transaction economics, paid at close.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How long does a §6418 ITC transfer take to close?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "A well-run §6418 ITC transfer takes 30–60 days from executed term sheet to funded close. This assumes the seller has completed IRS pre-filing registration, has an independent cost segregation study in hand, and can obtain a tax credit insurance binder promptly; deals stall when one of these items is missing when buyer diligence begins.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Why are TCTAs governed by Texas or Delaware law rather than California?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Even when the underlying solar or storage assets are in California, the TCTA is almost always governed by Texas or Delaware law. Texas commercial law is predictable and favors written terms, Delaware is the corporate law baseline for most counterparties, and California's implied covenant and consumer protection framework create uncertainty that both sides' counsel prefer to avoid.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Why is the buyer the primary IRS target in a §6418 transfer?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The credits appear on the buyer's federal income tax return, so in an IRS audit of the underlying project it is the buyer's return that is examined and the buyer who must defend the credit claim. This is why buyers need their own experienced §48E counsel and why tax credit insurance is issued to the buyer, with the seller's indemnity serving as a backstop.",
+      },
+    },
+  ],
+};
+
 export default function TCTALegalGuide() {
   return (
     <main className="min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+
       {/* Header */}
       <div className="bg-gradient-to-br from-[#0F1F3D] to-[#1a3a6b] text-white py-20 px-6">
         <div className="max-w-3xl mx-auto">

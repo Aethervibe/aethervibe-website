@@ -16,9 +16,79 @@ export const metadata: Metadata = {
   },
 };
 
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline:
+    "The §48E Battery Storage ITC Buyer Guide: Why BESS Credits Are the Safest Bet After OBBBA",
+  description:
+    "After the One Big Beautiful Bill Act, solar and wind ITCs face accelerated phase-outs — but §48E standalone battery storage credits remain fully protected through 2033. Here's what corporate buyers need to know.",
+  author: { "@type": "Organization", name: "Aethervibe" },
+  publisher: { "@type": "Organization", name: "Aethervibe" },
+  datePublished: "2026-05-01",
+  mainEntityOfPage:
+    "https://www.aethervibe.com/insights/bess-48e-itc-buyer-guide",
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "How did the One Big Beautiful Bill Act (OBBBA) change the ITC landscape for battery storage?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "OBBBA, signed July 4, 2025, accelerated the phase-out of solar and wind ITCs but left standalone §48E battery energy storage systems on the original technology-neutral timeline. BESS credits remain fully protected for projects beginning construction through December 31, 2033, then phase down to 75% in 2034, 50% in 2035, and zero after 2035.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What is a §48E battery storage ITC?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Section 48E provides an Investment Tax Credit for clean electricity property placed in service after December 31, 2024, and for standalone battery storage it replaced the older §48 framework. The rate structure is a 6% base, a 30% enhanced rate when Prevailing Wage and Apprenticeship requirements are met or the small-project exemption applies, plus potential 10% Energy Community and 10% Domestic Content adders.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Who is the ideal buyer of §48E BESS credits?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The ideal buyer has meaningful federal income tax liability, U.S. C-Corporation status with direct entity-level federal tax, and 2025 or 2026 tax year timing that aligns with the transfer deadline. Pass-through entities can participate but require additional analysis of the passive activity rules and partner-level credit allocation.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How does recapture risk work in a BESS ITC transaction?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "If a project stops being qualifying §48E property within 5 years of being placed in service, a portion of the credit can be recaptured, with risk declining 20% per year to zero after year five. For residential BESS portfolios the practical risk is considered low because recapture is triggered by seller actions, portfolio distribution limits the impact of any single system, and tax credit insurance can cover recapture events.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What documentation should a §48E BESS seller provide?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "A well-prepared seller can provide IRS Energy Credits Online registration confirmation, an independent cost segregation study, a tax credit insurance binder or indication, placed-in-service documentation, a FEOC compliance memo for 2025 projects, and a proposed TCTA term sheet before or upon NDA execution.",
+      },
+    },
+  ],
+};
+
 export default function BESSBuyerGuide() {
   return (
     <main className="min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+
       {/* Header */}
       <div className="bg-gradient-to-br from-[#0F1F3D] to-[#1a3a6b] text-white py-20 px-6">
         <div className="max-w-3xl mx-auto">

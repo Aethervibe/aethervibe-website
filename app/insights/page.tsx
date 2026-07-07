@@ -11,6 +11,16 @@ export const metadata: Metadata = {
 
 const articles = [
   {
+    slug: "real-estate-c-corporation-section-6418-tax-credits",
+    title:
+      "Own Real Estate in a C-Corporation With a Big Tax Year? How §6418 Credits Cut the Bill",
+    description:
+      "A building sale, depreciation recapture, or a strong rental year can hand a closely-held real-estate C-corp a federal tax bill it can see coming. Section 6418 credits are one of the most direct ways to reduce it — including a passive-activity angle that works in this profile's favor.",
+    date: "July 2026",
+    readTime: "9 min read",
+    tag: "Corporate Finance",
+  },
+  {
     slug: "section-6418-cpa-playbook-closely-held-c-corps",
     title:
       "Section 6418 for Closely-Held C-Corporations: The CPA Playbook for the Segment Big Firms Overlook",

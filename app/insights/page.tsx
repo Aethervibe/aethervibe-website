@@ -11,6 +11,16 @@ export const metadata: Metadata = {
 
 const articles = [
   {
+    slug: "sub-5m-feoc-guide-2026",
+    title:
+      "Sub-$5M FEOC Guide 2026: What Notice 2026-15 Means for Mid-Market §48E ITC Deals",
+    description:
+      "Six months after Treasury issued the first substantive FEOC guidance under OBBBA, the middle-market §6418 transfer landscape has a shape most public commentary is missing. A practitioner's reading of MACR mechanics, insurance carve-out reality, and the domestic content play for sub-$5M §48E ITC deals.",
+    date: "July 2026",
+    readTime: "7 min read",
+    tag: "Market Analysis",
+  },
+  {
     slug: "real-estate-c-corporation-section-6418-tax-credits",
     title:
       "Own Real Estate in a C-Corporation With a Big Tax Year? How §6418 Credits Cut the Bill",

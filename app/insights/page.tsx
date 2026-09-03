@@ -11,6 +11,16 @@ export const metadata: Metadata = {
 
 const articles = [
   {
+    slug: "state-tax-on-selling-clean-energy-credits",
+    title:
+      "Is the Money From Selling a Clean Energy Tax Credit Taxable in Your State?",
+    description:
+      "Section 6418 excludes credit sale proceeds from federal gross income. State treatment turns on your state's IRC conformity date — and if that date predates August 16, 2022, the exclusion may not exist for state purposes. A five-minute check developers can run before agreeing on a price.",
+    date: "September 2026",
+    readTime: "6 min read",
+    tag: "Developer Guide",
+  },
+  {
     slug: "sub-5m-feoc-guide-2026",
     title:
       "Sub-$5M FEOC Guide 2026: What Notice 2026-15 Means for Mid-Market §48E ITC Deals",

@@ -55,6 +55,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     ...articles,
     {
+      url: `${BASE}/open-questions`,
+      lastModified: pageMtime("app", "open-questions"),
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    {
       url: `${BASE}/faq`,
       lastModified: pageMtime("app", "faq"),
       changeFrequency: "monthly",

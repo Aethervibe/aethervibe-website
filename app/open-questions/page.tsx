@@ -1,36 +1,77 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title:
-    "Open Questions in Section 6418 Practice | Aethervibe",
+  title: "Open Questions in Transferable Tax Credits | Aethervibe",
   description:
-    "A running list of questions in transferable clean energy tax credit practice where the statutory and regulatory text stops short of an answer. Each entry quotes the authority up to the point where it stops speaking.",
+    "The unsolved questions in the transferable tax credit market (IRC §6418 and adjacent): market questions — what small sellers net, whether the $1–5M segment clears, surety-only buyers, the institutional service floor, the survival of transferability — and mechanical questions under the regulations, each quoting the authority to the point where it stops speaking.",
   alternates: {
     canonical: "https://www.aethervibe.com/open-questions",
   },
   openGraph: {
-    title: "Open Questions in Section 6418 Practice",
+    title: "Open Questions in Transferable Tax Credits",
     description:
-      "Questions that come up in real section 6418 transactions and that the published text does not answer. Maintained, and credited when answered.",
+      "The questions we have not been able to answer from public sources — the honest boundary of our research on the transferable tax credit market. Maintained as a living document; answered questions are credited by name.",
     url: "https://www.aethervibe.com/open-questions",
     type: "article",
   },
 };
 
+// Evaluated at build time for this statically generated page.
+const BUILD_DATE = new Date().toLocaleDateString("en-US", {
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+});
+
 const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: "Open Questions in Section 6418 Practice",
+  headline: "Open Questions in Transferable Tax Credits",
   description:
-    "A maintained list of unresolved questions in transferable clean energy tax credit practice, each quoting the governing text up to the point where it stops answering.",
+    "A maintained list of unsolved questions in the transferable tax credit market (IRC §6418 and adjacent): market-level questions stating what can be established and what remains open, and mechanical questions under the regulations quoting the governing text to the point where it stops answering.",
   author: { "@type": "Organization", name: "Aethervibe" },
   publisher: { "@type": "Organization", name: "Aethervibe" },
   datePublished: "2026-09-06",
-  dateModified: "2026-09-06",
+  dateModified: new Date().toISOString().slice(0, 10),
   mainEntityOfPage: "https://www.aethervibe.com/open-questions",
 };
 
-function Question({
+function StatusBadge() {
+  return (
+    <p className="!mt-0 !mb-6">
+      <span className="inline-block bg-amber-100 text-amber-900 text-xs font-semibold tracking-wide uppercase px-2.5 py-1 rounded">
+        Status: open
+      </span>
+    </p>
+  );
+}
+
+function MarketQuestion({
+  n,
+  title,
+  establish,
+  open,
+}: {
+  n: number;
+  title: string;
+  establish: React.ReactNode;
+  open: React.ReactNode;
+}) {
+  return (
+    <section className="mt-14 pt-10 border-t border-slate-200">
+      <h3 className="!mt-0 !mb-2 text-xl md:text-2xl font-bold">
+        {n}. {title}
+      </h3>
+      <StatusBadge />
+      <h4 className="!mb-2">What we can establish</h4>
+      <p className="!mt-0">{establish}</p>
+      <h4 className="!mb-2">What remains open</h4>
+      <p className="!mt-0">{open}</p>
+    </section>
+  );
+}
+
+function MechQuestion({
   n,
   title,
   children,
@@ -41,14 +82,10 @@ function Question({
 }) {
   return (
     <section className="mt-14 pt-10 border-t border-slate-200">
-      <h2 className="!mt-0 !mb-2">
+      <h3 className="!mt-0 !mb-2 text-xl md:text-2xl font-bold">
         {n}. {title}
-      </h2>
-      <p className="!mt-0 !mb-6">
-        <span className="inline-block bg-amber-100 text-amber-900 text-xs font-semibold tracking-wide uppercase px-2.5 py-1 rounded">
-          Status: open
-        </span>
-      </p>
+      </h3>
+      <StatusBadge />
       {children}
     </section>
   );
@@ -72,19 +109,20 @@ export default function OpenQuestions() {
             &larr; Insights
           </a>
           <div className="inline-block bg-emerald-500/20 text-emerald-300 text-xs font-semibold px-3 py-1 rounded-full mb-4 border border-emerald-500/30">
-            Reference
+            Living research document
           </div>
           <h1 className="text-3xl md:text-4xl font-bold leading-tight mb-4">
-            Open Questions in Section 6418 Practice
+            Open Questions in Transferable Tax Credits
           </h1>
           <p className="text-gray-300 text-lg">
-            A running list of questions where the statutory and regulatory text
-            stops short of an answer.
+            The unsolved questions in the transferable tax credit market (IRC
+            &sect;6418 and adjacent) &mdash; the honest boundary of what we
+            know.
           </p>
           <div className="mt-6 flex items-center gap-4 text-sm text-gray-400">
             <span>Maintained by Aethervibe</span>
             <span>&middot;</span>
-            <span>Last updated September 2026</span>
+            <span>Last updated {BUILD_DATE}</span>
           </div>
         </div>
       </div>
@@ -92,20 +130,157 @@ export default function OpenQuestions() {
       {/* Body */}
       <div className="max-w-3xl mx-auto px-6 py-16 prose prose-lg prose-slate max-w-none">
         <p>
-          We work on transferable clean energy tax credit deals at the smaller
-          end of the market. These are the questions that come up repeatedly and
-          that we have not been able to resolve from the text itself. Each entry
-          says what the problem is, quotes the authority up to the point where
-          it stops speaking, and describes who would be in a position to answer.
+          This market is young and thinly documented. These are the questions we
+          have not been able to answer from public sources &mdash; the honest
+          boundary of our research. They come in two kinds: market questions,
+          where the public record simply stops, and mechanical questions under
+          the regulations, where the governing text itself stops short of an
+          answer.
         </p>
         <p>
           <strong>
-            This page is maintained. When a question is answered, we say so and
-            credit the person who answered it.
+            If you can answer one of them &mdash; in either section &mdash;
+            write to <a href="mailto:ceo@aethervibe.com">ceo@aethervibe.com</a>.
+            Answered questions are credited by name.
           </strong>
         </p>
 
-        <Question n={1} title="When exactly does the payment window close?">
+        {/* ===================== Section I: Market questions ===================== */}
+        <section className="mt-16 pt-10 border-t-2 border-slate-300">
+          <h2 className="!mt-0 !mb-2">Market questions</h2>
+          <p className="!mt-0">
+            Questions about the economics of the market itself, where the
+            public record stops. For each, we state what can be established
+            from public sources and what remains open.
+          </p>
+        </section>
+
+        <MarketQuestion
+          n={1}
+          title="What do sellers of small transferable credits actually net?"
+          establish={
+            <>
+              Published gross pricing indications exist for large deals, and the
+              cost categories a seller faces on the way to closing &mdash;
+              advisors, insurance, diligence &mdash; are well known. At the
+              large end of the market, the gross side of the trade is reasonably
+              visible.
+            </>
+          }
+          open={
+            <>
+              For sub-$5M credits, net-of-all-costs proceeds data is essentially
+              undocumented. No public source shows what a small seller actually
+              keeps after every cost is paid &mdash; and net, not gross, is the
+              number that decides whether a small transfer is worth doing.
+            </>
+          }
+        />
+
+        <MarketQuestion
+          n={2}
+          title="Is there a clearing price for $1–5M credits — or does the segment simply not clear?"
+          establish={
+            <>
+              Two hypotheses both fit the observable facts: (a) this is genuine
+              white space awaiting infrastructure, or (b) the economics simply
+              do not close at this size. Each explains the same visible pattern
+              of thin activity in the segment.
+            </>
+          }
+          open={
+            <>
+              Public evidence distinguishing the two hypotheses is thin. We have
+              found nothing that separates &ldquo;deals not happening because no
+              one serves them&rdquo; from &ldquo;deals not happening because
+              they cannot pencil&rdquo; &mdash; and the two imply opposite
+              conclusions about the segment.
+            </>
+          }
+        />
+
+        <MarketQuestion
+          n={3}
+          title="Does anyone buy small credits on surety/guarantee protection alone, without traditional tax insurance?"
+          establish={
+            <>
+              Minimum-premium economics make traditional tax credit insurance
+              impractical at small face amounts. Guarantees and surety
+              instruments are the substitutes most often discussed for
+              protecting a buyer at this size.
+            </>
+          }
+          open={
+            <>
+              Whether a bond-only or guarantee-only buyer segment actually
+              exists is unresolved. We have not found a documented transaction
+              in which a buyer closed a small credit purchase on surety or
+              guarantee protection alone. (On whether a surety instrument can
+              stand behind a tax indemnity at all, see question 13 below.)
+            </>
+          }
+        />
+
+        <MarketQuestion
+          n={4}
+          title="What is the institutional service floor across credit types?"
+          establish={
+            <>
+              Law firms, insurers, and platforms each have a minimum deal size
+              below which they will not engage, and practitioners acknowledge
+              these floors readily in conversation. The floor exists in every
+              credit market; it is simply not written down.
+            </>
+          }
+          open={
+            <>
+              That minimum has never been published &mdash; and never compared
+              across renewable ITC, LIHTC, historic rehabilitation, and
+              conservation credits. Whether the floor sits at the same level in
+              each market, and why, is unknown from public sources.
+            </>
+          }
+        />
+
+        <MarketQuestion
+          n={5}
+          title="Will transferability itself survive?"
+          establish={
+            <>
+              Legislative and regulatory risk to &sect;6418 is the single
+              variable that could reprice everything in this market. Adjacent
+              markets &mdash; tax insurance and surety &mdash; price risk
+              continuously, so their behavior carries information about how
+              professionals handicap that risk.
+            </>
+          }
+          open={
+            <>
+              What the early indicators to watch are, and what adjacent-market
+              behavior (insurance appetite, surety appetite) already signals,
+              has not been analyzed in any public source we have found. A
+              watchlist for the survival of transferability does not yet exist.
+            </>
+          }
+        />
+
+        {/* ============ Section II: Mechanical questions under the regulations ============ */}
+        <section className="mt-16 pt-10 border-t-2 border-slate-300">
+          <h2 className="!mt-0 !mb-2">
+            Mechanical questions under the regulations
+          </h2>
+          <p className="!mt-0">
+            Several mechanical questions under &sect;6418 &mdash; among them the
+            payment windows between commitment and transfer election, and the
+            transferee&rsquo;s tax-year mechanics &mdash; remain thinly
+            documented in guidance and commentary. The questions below come up
+            in real transactions. Each entry says what the problem is, quotes
+            the authority up to the point where it stops speaking, and
+            describes who would be in a position to answer.
+          </p>
+        </section>
+
+        <MechQuestion n={6} title="When exactly does the payment window close?">
           <p>
             <strong>The question.</strong> The election requires cash paid within
             a defined window. Practitioners routinely describe that window as
@@ -141,10 +316,10 @@ export default function OpenQuestions() {
             transfers where the two parties had different fiscal years, or who
             has had this timing question raised on examination.
           </p>
-        </Question>
+        </MechQuestion>
 
-        <Question
-          n={2}
+        <MechQuestion
+          n={7}
           title="What happens to an installment that lands outside the window?"
         >
           <p>
@@ -194,10 +369,10 @@ export default function OpenQuestions() {
             multi-year payment structure under section 6418, or anyone with
             visibility into how the Service has treated one.
           </p>
-        </Question>
+        </MechQuestion>
 
-        <Question
-          n={3}
+        <MechQuestion
+          n={8}
           title="Which taxable year does the transferee use, and what does that do to a buyer with a non-calendar year?"
         >
           <p>
@@ -223,7 +398,7 @@ export default function OpenQuestions() {
             For a credit determined in a calendar year 2025 seller year, a buyer
             whose fiscal year ended in the spring of 2026 has, on this reading,
             already passed the only year in which it could take that credit into
-            account. Combined with question 1 &mdash; the window closing on the
+            account. Combined with question 6 &mdash; the window closing on the
             earlier filing &mdash; a buyer can be structurally ineligible for a
             given vintage without either party noticing until late in the
             process.{" "}
@@ -235,10 +410,10 @@ export default function OpenQuestions() {
             <strong>Who could answer.</strong> A practitioner who has run a
             transfer where the buyer had a non-calendar fiscal year.
           </p>
-        </Question>
+        </MechQuestion>
 
-        <Question
-          n={4}
+        <MechQuestion
+          n={9}
           title="How is an excessive credit transfer actually computed?"
         >
           <p>
@@ -274,9 +449,12 @@ export default function OpenQuestions() {
             <strong>Who could answer.</strong> Anyone who has computed one, or
             defended one.
           </p>
-        </Question>
+        </MechQuestion>
 
-        <Question n={5} title="Can reasonable cause reach the 20 percent addition?">
+        <MechQuestion
+          n={10}
+          title="Can reasonable cause reach the 20 percent addition?"
+        >
           <p>
             <strong>The question.</strong> The 20 percent addition under &sect;
             1.6418-5(a) is what makes indemnity caps set at 100 percent of
@@ -300,10 +478,10 @@ export default function OpenQuestions() {
             <strong>Who could answer.</strong> Tax controversy counsel, or anyone
             who has seen this raised in an examination.
           </p>
-        </Question>
+        </MechQuestion>
 
-        <Question
-          n={6}
+        <MechQuestion
+          n={11}
           title="Does section 469(e)(2) reach purchased credits held by a closely held C corporation?"
         >
           <p>
@@ -356,9 +534,12 @@ export default function OpenQuestions() {
             <strong>Who could answer.</strong> A practitioner who has applied
             section 469(e)(2) to a purchased credit on a filed return.
           </p>
-        </Question>
+        </MechQuestion>
 
-        <Question n={7} title="Which states have not adopted section 6418 at all?">
+        <MechQuestion
+          n={12}
+          title="Which states have not adopted section 6418 at all?"
+        >
           <p>
             <strong>The question.</strong> Section 6418(b)(2) excludes the
             proceeds from the seller&rsquo;s gross income as a matter of federal
@@ -384,9 +565,12 @@ export default function OpenQuestions() {
             <strong>Who could answer.</strong> State and local tax practitioners;
             a maintained conformity survey with citations to the state codes.
           </p>
-        </Question>
+        </MechQuestion>
 
-        <Question n={8} title="Can a surety bond stand behind a tax indemnity?">
+        <MechQuestion
+          n={13}
+          title="Can a surety bond stand behind a tax indemnity?"
+        >
           <p>
             <strong>The question.</strong> Tax credit insurance has a minimum
             premium that makes it uneconomic below a certain deal size.
@@ -410,25 +594,23 @@ export default function OpenQuestions() {
             <strong>Who could answer.</strong> A surety underwriter; counsel who
             has tried to place one.
           </p>
-        </Question>
+        </MechQuestion>
 
         <section className="mt-16 pt-10 border-t-2 border-slate-300">
           <h2 className="!mt-0">About this page</h2>
           <p>
-            We are a specialist in section 6418 credit transfers at the smaller
-            end of the market. This list exists because the questions on it come
-            up in real transactions and we have not found published answers.
-          </p>
-          <p>
-            <strong>
-              If you can answer one of these &mdash; or tell us the question is
-              wrong &mdash; we would like to hear from you, and we will say on
-              this page that you did.
-            </strong>
+            These questions come up in real work on transferable tax credits and
+            we have not found published answers. If you can answer one of them
+            &mdash; or tell us the question is wrong &mdash; write to us, and we
+            will say on this page that you did.
           </p>
           <p>
             <strong>Zhenghong Zhu</strong>, Founder, Aethermind LLC &middot;{" "}
             <a href="mailto:ceo@aethervibe.com">ceo@aethervibe.com</a>
+          </p>
+          <p>
+            Last updated: {BUILD_DATE}. This page is maintained as a living
+            document.
           </p>
           <p>
             <em>Nothing on this page is tax or legal advice.</em>
